@@ -1,32 +1,73 @@
 // TASK 1
 
-var petersMoney, jimsMoney;
+ var firstNum = 15;
+ var secondNum = -2;
+ var thirdNum = 22;
+ var fourthNum = 0;
+ var fifthNum = 13;
 
-petersMoney = 3500;
-jimsMoney = 5000;
+if (firstNum > secondNum && firstNum > thirdNum && firstNum > fourthNum && firstNum > fifthNum) {
 
-console.log(petersMoney>jimsMoney);
+	console.log("The largest number is "  + firstNum + ".");
+
+} else if (secondNum > firstNum && secondNum > thirdNum && secondNum > fourthNum && secondNum > fifthNum) {
+
+	console.log("The largest number is "  + secondNum + ".");
+
+} else if (thirdNum > firstNum && thirdNum > secondNum && thirdNum > fourthNum && thirdNum > fifthNum) {
+
+	console.log("The largest number is "  + thirdNum + ".");
+
+} else if (fourthNum > firstNum && fourthNum > secondNum && fourthNum > thirdhNum && fourthNum > fifthNum) {
+
+	console.log("The largest number is "  + fourthNum + ".");
+
+} else {
+
+	console.log("The largest number is "  + fifthNum + ".");
+}
 
 // TASK 2
 
-var johnsAge, futureYears, mikesAge;
+var a = 3;
+var b = -7;
+var c = 2;
+var product = a * b * c;
 
-johnsAge = 38;
-futureYears = 8;
-mikesAge = (johnsAge + futureYears)/2 - futureYears;
-console.log("Mike is " + mikesAge + " years old now.");
+if (product>0) {
+	console.log("The sign of product of three numbers is plus (+)");
+} else if (product<0) {
+	console.log("The sign of product of three numbers is minus (-)");
+} 
+// u slucaju da je jedna od varijabli 0
+else {
+	console.log("Product of three numbers is 0");
+}
 
 // TASK 3
 
-var firstFlock, secondFlock, firstMigration, secondMigration;
+var lang = "Japanese";
 
-firstFlock = 78;
-secondFlock = 57;
-firstMigration = 12;
-secondMigration = 4;
+switch (lang) {
+  case "Japanese": console.log("こんにちは世界!");
+  case "English": console.log("Hello World!");
+  case "German": console.log("Hallo Welt!");
+  case "Serbian": console.log("Zdravo Svete!");
+  case "Ukranian": console.log("Привіт Світ!");
+  // default:console.log("Lorem ipsum");
+}
 
-firstFlock -= firstMigration;
-secondFlock += firstMigration;
-secondFlock -= secondMigration;
+// TASK 4 :
 
-console.log(firstFlock >= secondFlock);
+var userAge = 18;
+var z;
+
+userAge >= 28 ? z = true : z = false;
+
+if (!z) {
+	console.log("User is less than 28 years old.");
+} else if (userAge > 28) {
+  console.log("User is older than 28.");
+} else {
+  console.log("User is 28 years old.");
+}
