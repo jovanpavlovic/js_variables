@@ -1,73 +1,123 @@
 // TASK 1
 
- var firstNum = 15;
- var secondNum = -2;
- var thirdNum = 22;
- var fourthNum = 0;
- var fifthNum = 13;
+console.log('TASK 1');
 
-if (firstNum > secondNum && firstNum > thirdNum && firstNum > fourthNum && firstNum > fifthNum) {
+var dataOld = [34, true, "Peter", 1992];
+var dataNew = [];
 
-	console.log("The largest number is "  + firstNum + ".");
-
-} else if (secondNum > firstNum && secondNum > thirdNum && secondNum > fourthNum && secondNum > fifthNum) {
-
-	console.log("The largest number is "  + secondNum + ".");
-
-} else if (thirdNum > firstNum && thirdNum > secondNum && thirdNum > fourthNum && thirdNum > fifthNum) {
-
-	console.log("The largest number is "  + thirdNum + ".");
-
-} else if (fourthNum > firstNum && fourthNum > secondNum && fourthNum > thirdhNum && fourthNum > fifthNum) {
-
-	console.log("The largest number is "  + fourthNum + ".");
-
-} else {
-
-	console.log("The largest number is "  + fifthNum + ".");
+for (var i = 0; i<dataOld.length; i++) {
+  dataNew[i] = dataOld[i];
 }
+
+console.log(dataNew);
 
 // TASK 2
 
-var a = 3;
-var b = -7;
-var c = 2;
-var product = a * b * c;
+console.log('TASK 2');
 
-if (product>0) {
-	console.log("The sign of product of three numbers is plus (+)");
-} else if (product<0) {
-	console.log("The sign of product of three numbers is minus (-)");
-} 
-// u slucaju da je jedna od varijabli 0
-else {
-	console.log("Product of three numbers is 0");
+for (var i = dataOld.length -1 ; i >= 0; i--) {
+  dataNew[dataOld.length -1 - i] = dataOld[i];
 }
 
-// TASK 3
+console.log(dataNew);
 
-var lang = "Japanese";
+// TASK 3:
 
-switch (lang) {
-  case "Japanese": console.log("こんにちは世界!");
-  case "English": console.log("Hello World!");
-  case "German": console.log("Hallo Welt!");
-  case "Serbian": console.log("Zdravo Svete!");
-  case "Ukranian": console.log("Привіт Світ!");
-  // default:console.log("Lorem ipsum");
+console.log('TASK 3');
+
+var dataNew = [12, "Jack"];
+
+for (var i = 2; i < 6; i++) {
+  dataNew[i] = dataOld[i - 2];
+}
+console.log(dataNew);
+
+// TASK 4
+
+console.log('TASK 4');
+
+//1st example Concat
+
+var a = [12, 56, 32, 44, 69];
+var b = [88, 7, 13];
+var c = a.concat(b);
+
+console.log(c);
+
+//2nd example Spread
+
+var a = [12, 56, 32, 44, 69];
+var b = [88, 7, 13];
+var c = [...a , ...b];
+
+console.log(c);
+
+//3rd example For
+
+var a = [12, 56, 32, 44, 69];
+var b = [88, 7, 13];
+var c = [];
+
+for (var i = 0; i < a.length; i++) {
+  c[i] = a[i];
 }
 
-// TASK 4 :
-
-var userAge = 18;
-var z;
-
-userAge >= 28 ? z = true : z = false;
-
-if (!z) {
-	console.log("User is less than 28 years old.");
-} else if (userAge > 28) {
-  console.log("User is older than 28.");
-} else {
-  console.log("User is 28 years old.");
+for (var i = a.length; i < a.length + b.length; i++) {
+  // na petu poziciju stavi 0 od b
+  c[i] = b[i - a.length];
 }
+console.log(c);
+
+// TASK 5:
+
+console.log('TASK 5');
+
+var a = [12, 56, 32, 44];
+var b = [88, 7, 13];
+var c = [];
+
+for (var i = 0, j = 0; i+j < 7;) {
+    if(i<a.length) {
+        c[i+j] = a[i++];
+    }
+    if(j<b.length) {
+        c[i+j] = b[j++];
+    }
+}
+
+console.log(c);
+
+// TASK 6
+
+console.log('TASK 6');
+
+var star = "";
+
+for (var i = 6; i >= 1; i--){
+  star += "*";
+ console.log(star);
+}
+
+
+// TASK 7:
+
+console.log('TASK 7');
+
+var x = 7;
+var y = 11;
+var p = x - 1;
+var o = y - 1;
+var z = "";
+
+for (var i = 0; i < x; i++) {
+  for (var j = 0; j < y; j++) {
+    if (j > 0 && j < o && i > 0 && i < p) {
+      z += " ";
+    } else { 
+      z += "*";
+    }
+  }
+  z += "\n";
+}
+
+console.log(z);
