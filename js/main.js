@@ -1,123 +1,95 @@
-// TASK 1
+//TASK 1
 
-console.log('TASK 1');
+console.log("TASK 1")
 
-var dataOld = [34, true, "Peter", 1992];
-var dataNew = [];
+var reverse = function(data) {
+var newarr = [];
 
-for (var i = 0; i<dataOld.length; i++) {
-  dataNew[i] = dataOld[i];
-}
-
-console.log(dataNew);
-
-// TASK 2
-
-console.log('TASK 2');
-
-for (var i = dataOld.length -1 ; i >= 0; i--) {
-  dataNew[dataOld.length -1 - i] = dataOld[i];
-}
-
-console.log(dataNew);
-
-// TASK 3:
-
-console.log('TASK 3');
-
-var dataNew = [12, "Jack"];
-
-for (var i = 2; i < 6; i++) {
-  dataNew[i] = dataOld[i - 2];
-}
-console.log(dataNew);
-
-// TASK 4
-
-console.log('TASK 4');
-
-//1st example Concat
-
-var a = [12, 56, 32, 44, 69];
-var b = [88, 7, 13];
-var c = a.concat(b);
-
-console.log(c);
-
-//2nd example Spread
-
-var a = [12, 56, 32, 44, 69];
-var b = [88, 7, 13];
-var c = [...a , ...b];
-
-console.log(c);
-
-//3rd example For
-
-var a = [12, 56, 32, 44, 69];
-var b = [88, 7, 13];
-var c = [];
-
-for (var i = 0; i < a.length; i++) {
-  c[i] = a[i];
-}
-
-for (var i = a.length; i < a.length + b.length; i++) {
-  // na petu poziciju stavi 0 od b
-  c[i] = b[i - a.length];
-}
-console.log(c);
-
-// TASK 5:
-
-console.log('TASK 5');
-
-var a = [12, 56, 32, 44];
-var b = [88, 7, 13];
-var c = [];
-
-for (var i = 0, j = 0; i+j < 7;) {
-    if(i<a.length) {
-        c[i+j] = a[i++];
-    }
-    if(j<b.length) {
-        c[i+j] = b[j++];
-    }
-}
-
-console.log(c);
-
-// TASK 6
-
-console.log('TASK 6');
-
-var star = "";
-
-for (var i = 6; i >= 1; i--){
-  star += "*";
- console.log(star);
-}
-
-
-// TASK 7:
-
-console.log('TASK 7');
-
-var x = 7;
-var y = 11;
-var p = x - 1;
-var o = y - 1;
-var z = "";
-
-for (var i = 0; i < x; i++) {
-  for (var j = 0; j < y; j++) {
-    if (j > 0 && j < o && i > 0 && i < p) {
-      z += " ";
-    } else { 
-      z += "*";
-    }
+  for (var i = 0; i < data.length; i++) {
+    newarr[i] = data[data.length - 1 - i];
   }
-  z += "\n";
+  console.log(newarr);
+};
+
+reverse([56, "John", "Mark", 32]);
+
+//TASK 2
+
+console.log("TASK 2")
+
+var type = function(datatype) {
+  console.log("This element is the typeof: " + typeof datatype);
+};
+
+type("Mark");
+type(true);
+type(89);
+
+//TASK 3
+
+console.log("TASK 3")
+
+var longName = function (name_arr){
+
+  var j = 0;
+  var longestName;
+
+  for (var i = 0; i < name_arr.length; i++){
+      if (name_arr[i].length > j){
+        j = name_arr[i].length;
+        longestName= name_arr[i];
+      }
+
+  }
+  console.log(longestName);
 }
 
-console.log(z);
+longName(["Alexander", "John", "Mark", "Peter"]);
+
+
+//TASK 4
+
+console.log("TASK 4")
+
+function greatestLowest(arr_num)  {  
+for (var i = 1; i < arr_num.length; i++)
+    for (var j = 0; j < i; j++)
+        if (arr_num[i] < arr_num[j]) {
+          var s = arr_num[i];
+          arr_num[i] = arr_num[j];
+          arr_num[j] = s;
+        }
+
+  console.log(arr_num[1]);
+  console.log(arr_num[arr_num.length - 2]);
+} 
+
+  
+greatestLowest([6.7, -1, 8, 0, 3, 4, 5, 2]);  
+
+
+//TASK 5
+
+console.log("TASK 5")
+
+function getNumber(number_one, number_two){
+
+ var newArr = [];
+ for (var i = 0; i < number_one.length; i++) {
+   newArr[i] = [...number_one, 6];
+ }
+ return newArr;
+}
+
+
+var printNums = function(nums, singlenum) {
+
+  var biggestnum = getNumber(nums);
+ for (var i = 0; i < nums.length; i++) {
+   if (nums[i]>singlenum) {
+     console.log(nums[i]);
+   }
+ }
+}
+
+printNums([3, 5, 76 ,1, 2], 6);
