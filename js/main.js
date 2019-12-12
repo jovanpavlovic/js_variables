@@ -70,26 +70,47 @@ greatestLowest([6.7, -1, 8, 0, 3, 4, 5, 2]);
 
 //TASK 5
 
-console.log("TASK 5")
+//Using spread operator - Excercise 
+
+// console.log("TASK 5 - a")
+
+// function getNumber(number_one, number_two){
+
+//  var newArr = [];
+//  for (var i = 0; i < number_one.length; i++) {
+//    newArr[i] = [...number_one, 6];
+//  }
+//  return newArr;
+// }
+
+
+// var printNums = function(nums, singlenum) {
+
+//   var biggestnum = getNumber(nums);
+//  for (var i = 0; i < nums.length; i++) {
+//    if (nums[i]>singlenum) {
+//      console.log(nums[i]);
+//    }
+//  }
+// }
+
+// printNums([3, 5, 76 ,1, 2], 6);
+
+console.log("TASK 5 - b")
 
 function getNumber(number_one, number_two){
 
  var newArr = [];
  for (var i = 0; i < number_one.length; i++) {
-   newArr[i] = [...number_one, 6];
- }
- return newArr;
+  if (number_one[i] > number_two) {
+       newArr[newArr.length] = number_one[i];
+    }
+  }
+  return newArr;
 }
 
-
-var printNums = function(nums, singlenum) {
-
-  var biggestnum = getNumber(nums);
- for (var i = 0; i < nums.length; i++) {
-   if (nums[i]>singlenum) {
-     console.log(nums[i]);
-   }
- }
+var printNums = function(nums, singleNum) {
+  var biggerNum = getNumber(nums, singleNum)
+  console.log(biggerNum);
 }
-
-printNums([3, 5, 76 ,1, 2], 6);
+printNums([3, 76 ,67, 2], 6);
