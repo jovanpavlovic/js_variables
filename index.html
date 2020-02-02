@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JS Data Types</title>
-	<meta charset="utf-8" />
-	<script  type="text/javascript" src="js/main.js"></script>
+	<meta charset="utf-8">
+	<title>JS slider</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<h1>JS Data Types</h1>
+	
+	<div class="main">
+
+		<h2>Way one</h2>
+
+		<img src="img/image1.jpg" id="mainImage"><br>
+		<!-- <img src="img/image1.jpg" id="thum"><br> -->
+
+
+		<h2>Way two with click on thumbnails</h2>
+
+		<img id="0" class="preview" src=""/>
+		
+		<div id="lower-image">
+
+			<img id="1" class="thumbnail" src="img/image1.jpg" alt="image1" onclick ="preview(this)"/> <!-- We can use onmouseover instead onclick for hover effect -->
+			<img id="2" class="thumbnail" src="img/image2.jpg" alt="image2" onclick ="preview(this)"/>
+			<img id="3" class="thumbnail" src="img/image3.jpg" alt="image3" onclick ="preview(this)"/>
+			<img id="4" class="thumbnail" src="img/image4.jpg" alt="image4" onclick ="preview(this)"/>
+			<img id="5" class="thumbnail" src="img/image5.jpg" alt="image5" onclick ="preview(this)"/>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>
