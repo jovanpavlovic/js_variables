@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>JS slider</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-	
-	<div class="main">
-
-		<h2>Way one</h2>
-
-		<img src="img/image1.jpg" id="mainImage"><br>
-		<!-- <img src="img/image1.jpg" id="thum"><br> -->
-
-
-		<h2>Way two with click on thumbnails</h2>
-
-		<img id="0" class="preview" src=""/>
-		
-		<div id="lower-image">
-
-			<img id="1" class="thumbnail" src="img/image1.jpg" alt="image1" onclick ="preview(this)"/> <!-- We can use onmouseover instead onclick for hover effect -->
-			<img id="2" class="thumbnail" src="img/image2.jpg" alt="image2" onclick ="preview(this)"/>
-			<img id="3" class="thumbnail" src="img/image3.jpg" alt="image3" onclick ="preview(this)"/>
-			<img id="4" class="thumbnail" src="img/image4.jpg" alt="image4" onclick ="preview(this)"/>
-			<img id="5" class="thumbnail" src="img/image5.jpg" alt="image5" onclick ="preview(this)"/>
-
-		</div>
-
-	</div>
-
-	<script type="text/javascript" src="js/main.js"></script>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Movies</title>
+  </head>
+  <body>
+  	<div id="main">
+	    <header>
+	    	<div id="page-banner">
+	    		<h1 class="title">Movie list</h1>
+          <form id="search-movies">
+            <input type="text" placeholder="worlds apart" />
+          </form>
+	    	</div>
+	    </header>
+	    <div id="movie-list">
+	    	<h2 class="title">List of movies</h2>
+	    	<ul>
+	    		<li class="action parent" >
+	    			<span class="name">Worlds Apart</span>
+	    			<img class='child' src='img/image1.jpg'>
+	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
+	    			<span class="del">Delete</span>
+	    		</li>
+	    		<li class="action parent" >
+	    			<span class="name">Home Alone</span>
+	    			<img class='child' src='img/image1.jpg'>
+	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
+	    			<span class="del">Delete</span>
+	    		</li>
+	    		<li class="action parent" >
+	    			<span class="name">Direct Action</span>
+	    			<img class='child' src='img/image1.jpg'>
+	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
+	    			<span class="del">Delete</span>
+	    		</li>
+	    		<li class="action parent" >
+	    			<span class="name">Sorority Row</span>
+	    			<img class='child' src='img/image1.jpg'>
+	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
+	    			<span class="del">Delete</span>
+	    		</li>
+	    		<li class=" parent" >
+	    			<span class="name">Friends</span>
+	    			<img class='child' src='img/image1.jpg'>
+	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
+	    			<span class="del">Delete</span>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <form id="add-movie">
+	    	 <input type="checkbox" id="series" />
+        	<label for="series">Show series only</label> filter for series
+	    	<input type="text" placeholder="Name of the movie you want to add" required/>
+	    	<button>Add</button>
+	    </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
 </html>
