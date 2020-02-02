@@ -1,177 +1,28 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.breed {
+  margin: 0 auto;
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+#dogImg {
+  margin: 0 auto;
+  width: 25%;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 
-#main{
-    width: 70%;
-    max-width: 500px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding: 0 0 20px;
-    overflow: hidden;
-    border: 1px solid lightgray;
-}
-
-#page-banner{
-    background: #46A29F ;
-    padding: 10px 0;
-    border-bottom: 1px solid #333;
-
-}
-
-#page-banner h1, #page-banner p{
-    width: 100%;
-    text-align: center;
-    margin: 10px 0;
-    color: #333;
-}
-
-h2{
-	color: #333;
-}
-
-#page-banner input{
-    max-width: 300px;
-    margin: 20px auto;
-    display: block;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #444;
-}
-
-#movie-list, #add-movie, #tabbed-content{
-    margin: 30px;
-}
-
-#movie-list ul, #tabbed-content ul{
-    list-style-type: none;
-    padding: 0;
-}
-
-#movie-list li{
-    padding: 20px;
-    margin: 20px 10px;
-}
-
-#movie-list li:hover{
-    border: 1px solid #ddd;
-}
-
-.del{
-    background: #333;
-    padding: 3px;
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
-    height: 20px;
-    margin-left: 10px;
-}
-
-.fa {
-font-size:25px;
-}
-
-.del:hover{
-    background: #6E7E85;
-}
-
-#add-movie{
-    width: 400px;
-    margin: 0 auto;
-}
-
-#add-movie input{
-    display: block;
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    border-radius: 4px 0 0 4px;
-    box-sizing: border-box;
-    width: 300px;
-    float: left;
-    clear: both;
-}
-
-#add-movie button{
-    background: #333;
-    padding: 10px 20px;
-    font-size: 16px;
-    display: inline-block;
-    margin: 0;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    width: 100px;
-    float: left;
-    margin: 20px 0;
-    border-left: 0;
-    color: white;
-}
-
-#add-movie:after{
-    content: '';
-    display: block;
-    clear: both;
-}
-
-#add-movie #series{
-  width: 30px;
-}
-
-#add-movie label{
-  line-height: 52px;
-}
-
-#tabbed-content li{
-    display: inline-block;
-    padding: 10px 14px;
-    background: #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-#tabbed-content .panel{
-    display: none;
-    border: 1px solid #ddd;
-    padding: 0 10px;
-    border-radius: 4px;
-}
-
-/*#tabbed-content .panel.active{
-    display: block;
-}*/
-
-
-/*.panel, .flip {
-  font-size: 16px;
-  padding: 10px;
+.header {
   text-align: center;
-  background-color: #4CAF50;
-  color: white;
-  border: solid 1px #a6d8a8;
-  margin: auto;
-}
-
-.panel {
-  display: none;
-}*/
-
-.child {
-    display: none;
-}
-
- .parent:hover .child {
-    display: block;
-    margin-left: 10px;
-    margin-top: 0;
-}
-
-li {
-	display: flex;
-    justify-content: space-between;
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 16px 0;
 }

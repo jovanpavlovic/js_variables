@@ -1,62 +1,50 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS slider</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<label>Dog breeds: 
+		<select id="dogBreed">
+			<option selected="selected"></option>
+			<option value="husky" id="husky" >Husky</option>
+			<option value="akita" id="akita">Akita</option>
+			<option value="shiba">Shiba</option>
+			<option value="chow">Chow</option>
+			<option value="boxer">Boxer</option>
+		</select>
+	</label>
+	
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
+
+ -->
+
+ 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="css/style.css" rel="stylesheet" />
-    <title>Movies</title>
-  </head>
-  <body>
-  	<div id="main">
-	    <header>
-	    	<div id="page-banner">
-	    		<h1 class="title">Movie list</h1>
-          <form id="search-movies">
-            <input type="text" placeholder="worlds apart" />
-          </form>
-	    	</div>
-	    </header>
-	    <div id="movie-list">
-	    	<h2 class="title">List of movies</h2>
-	    	<ul>
-	    		<li class="action parent" >
-	    			<span class="name">Worlds Apart</span>
-	    			<img class='child' src='img/image1.jpg'>
-	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
-	    			<span class="del">Delete</span>
-	    		</li>
-	    		<li class="action parent" >
-	    			<span class="name">Home Alone</span>
-	    			<img class='child' src='img/image1.jpg'>
-	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
-	    			<span class="del">Delete</span>
-	    		</li>
-	    		<li class="action parent" >
-	    			<span class="name">Direct Action</span>
-	    			<img class='child' src='img/image1.jpg'>
-	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
-	    			<span class="del">Delete</span>
-	    		</li>
-	    		<li class="action parent" >
-	    			<span class="name">Sorority Row</span>
-	    			<img class='child' src='img/image1.jpg'>
-	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
-	    			<span class="del">Delete</span>
-	    		</li>
-	    		<li class=" parent" >
-	    			<span class="name">Friends</span>
-	    			<img class='child' src='img/image1.jpg'>
-	    			<p class="child">In modern Greece, while socioeconomic turmoil ravages Southern Europe, three distinct stories unfold, each representing a different generation of Greeks...</p>
-	    			<span class="del">Delete</span>
-	    		</li>
-	    	</ul>
-	    </div>
-	    <form id="add-movie">
-	    	 <input type="checkbox" id="series" />
-        	<label for="series">Show series only</label> filter for series
-	    	<input type="text" placeholder="Name of the movie you want to add" required/>
-	    	<button>Add</button>
-	    </form>
-    </div>
-    <script src="js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Dog API</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+ 	 <h1 class="header">Select your dog:</h1>
+
+  	<select class="breed" onchange="changeDog(this)">
+
+   		 <option selected="selected">-- Choose breed of a dog --</option>
+
+  	</select>
+
+  	<img id="dogImg" src="img/image1.jpg" alt="dog">
+
+  	<script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
