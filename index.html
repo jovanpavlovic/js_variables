@@ -1,50 +1,32 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>JS slider</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-
-	<label>Dog breeds: 
-		<select id="dogBreed">
-			<option selected="selected"></option>
-			<option value="husky" id="husky" >Husky</option>
-			<option value="akita" id="akita">Akita</option>
-			<option value="shiba">Shiba</option>
-			<option value="chow">Chow</option>
-			<option value="boxer">Boxer</option>
-		</select>
-	</label>
-	
-
-<script type="text/javascript" src="js/main.js"></script>
-
-</body>
-</html>
-
- -->
-
- 
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Dog API</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>YouTube</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="42x42" />
 </head>
 <body>
- 	 <h1 class="header">Select your dog:</h1>
+	<header>
+		<div class="main-wrapper">
 
-  	<select class="breed" onchange="changeDog(this)">
+			<a class="logo" href="#"><img src="img/logo.png" alt=""></a>
 
-   		 <option selected="selected">-- Choose breed of a dog --</option>
+			<section class="search">
+				<input type="text" name="search">
+				<button>Search</button>
+			</section>
 
-  	</select>
+		</div>
+	</header>
 
-  	<img id="dogImg" src="img/image1.jpg" alt="dog">
-
-  	<script type="text/javascript" src="js/main.js"></script>
+	<main>
+		<div class="main-wrapper">
+			<section class="video-preview"></section>
+			<section class="video-list"></section>
+		</div>
+	</main>
+	
+	<script type="text/javascript" src="JS/main.js"></script>
 </body>
 </html>
